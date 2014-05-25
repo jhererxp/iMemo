@@ -1,0 +1,12 @@
+<h1>Welcome to iMemo</h1>
+<%= link_to "New Memo", new_memo_path %>
+<hr>
+<h2>Latest Memos:</h2>
+
+<% @latest_memos.each do |m| %>
+	<%= render partial: "memos/index", locals: { memo: m } %>
+<hr>
+<%= link_to "All Memos", memos_path %>
+<% end %>
+
+

@@ -1,0 +1,3 @@
+<h1>Title:<%= @memo.title %></h2>
+<h2>Short Description: <%= @memo.description %></h2>
+<h3>Image: <%= @memo.image %></h3>

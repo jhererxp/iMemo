@@ -1,0 +1,15 @@
+<h1>Showing: <%= @memo.title %></h1>
+<hr>
+<b>Memo Description:</b> <%= @memo.subject %>
+<hr>
+<b>Date of Creation:</b> <%= @memo.created %>
+<hr>
+<b>Due date:</b> <%= @memo.due %>
+<hr>
+<b>Memo Content:</b> <%= @memo.content %>
+<hr>
+<b>Image Uploaded:</b> <%= image_tag @memo.image_url%>
+<hr>
+<%= link_to "Back to all Memos", memos_path %> |
+<%= link_to "Edit", edit_memo_path%> |
+<%= link_to "Delete", memo_path, method: :delete, data: { confirm: "Delete this Memo?" } %>

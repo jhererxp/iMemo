@@ -1,0 +1,23 @@
+<h1>All Memos</h1>
+<%= link_to "New Memo", new_memo_path %>
+<table>
+	<tr>
+		<td>Title	</td>
+		<td>Subject	</td>
+		<td>Date Due	           asd</td>
+		<td>Image</td>
+	</tr>
+	<% @memos.each do |memo| %>
+		<tr>
+			<td><%= memo.title %></td>
+			<td><%= memo.subject %></td>
+			<td><%= memo.due %></td>
+			<td><%= image_tag memo.image_url %></td>
+			<td>
+				<%= link_to "Show", memo_path(memo.id) %> |
+				<%= link_to "Edit", edit_memo_path(memo.id) %> |
+				<%= link_to "Delete", memo_path(memo.id), method: :delete, data: { confirm: "Delete this Memo?" } %>
+			</td>
+		</tr>
+	<% end %>
+</table>
